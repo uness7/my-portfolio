@@ -20,30 +20,48 @@ const Projects = ({ projects }) => {
                             return (
                                 <div
                                     key={project.id}
-                                    className="py-4 px-3 w-[32rem] bg-white h-64 rounded-md card-color text-slate-100 place-self-end"                          
+                                    className="py-4 px-3 w-[32rem] bg-white h-64 rounded-md card-color text-slate-100 place-self-end flex flex-col justify-evenly"                          
                                 >
-                                    <h1 className="text-center">{project.title}</h1>
+                                    <h1 className="text-center pb-4 border-green-900 border-b-4">{project.title}</h1>
                                     <p
                                         className="text-lg"
-                                    >Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit architecto quos, sapiente minima totam, ipsam quidem tempora.
+                                    >
+                                        {project.description}
                                     </p>          
-                                    <h2>Stack : Html, CSS, JS</h2>
-                                    {/* <a href="#">Demo live</a> */}
+                                    <div className="flex flex-row space-x-2">
+                                        {
+                                            project.stack.map((tech)=>{
+                                                return <span
+                                                    key={tech}
+                                                    className="text-lg"
+                                                >{tech}</span>
+                                            })
+                                        }
+                                    </div>
                                 </div>
                             )
                         } else {
                             return (
                                 <div
                                     key={project.id}
-                                    className="py-4 px-3 w-[32rem] bg-white h-64 rounded-md card-color text-slate-100"                          
+                                    className="py-4 px-3 w-[32rem] bg-white h-64 rounded-md card-color text-slate-100 flex flex-col justify-evenly"                          
                                 >
-                                    <h1 className="text-center">{project.title}</h1>
+                                    <h1 className="text-center pb-4 border-green-900 border-b-4">{project.title}</h1>
                                     <p
-                                        className="text-lg"
-                                    >Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit architecto quos, sapiente minima totam, ipsam quidem tempora.
+                                        className="text-lg font-sans font-normal"
+                                    >
+                                        {project.description}
                                     </p>          
-                                    <h2>Stack : Html, CSS, JS</h2>
-                                    {/* <a href="#">Demo live</a> */}
+                                    <div className="flex flex-row space-x-2">
+                                        {
+                                            project.stack.map((tech)=>{
+                                                return <span
+                                                    key={tech}
+                                                    className="text-lg"
+                                                >{tech}</span>
+                                            })
+                                        }
+                                    </div>
                                 </div>
                             )
                         }
