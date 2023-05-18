@@ -5,6 +5,11 @@
 
 
 @layer utilities {
+
+
+    html {
+      scroll-behavior: smooth;
+    }
     .card-color {
         background-color: #252525
     }
@@ -12,7 +17,7 @@
         place-self: start;
       }
     
-      .place-self-end {
-        place-self: end;
-      }
+    .place-self-end {
+      place-self: end;
+    }
 }

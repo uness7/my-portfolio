@@ -10,11 +10,10 @@ const Projects = ({ projects }) => {
 
 
     return (
-        <div className="text-white px-16 py-8" id="projects-section">
-            <h1 
-                className="text-center text-6xl mb-6 font-roboto"
+        <div className="text-white px-16 py-8"  id="projects-section">
+            <h1 className="text-center text-6xl mb-8 font-roboto"
             >Projects</h1>
-            <div className="grid grid-cols-2 gap-5 text-2xl">
+            <div className="grid grid-cols-2 gap-5 text-2xl ">
                 {
                     projects.map((project)=>{
                         if(project.id%2==1) {
