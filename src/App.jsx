@@ -1,18 +1,22 @@
 import { createRoot } from 'react-dom/client';
+import Projects from './Projects';
+import Hero from "./Hero";
+import Footer from './Footer';
 
 const App = () => {
+
+    const projects = [
+        {id: 1, title: "one", stack: ['symfmony', 'react'], styled: true},
+        {id: 2, title: "two", stack: ['symfmony', 'react'], styled: false},        
+        {id: 3, title: "three", stack: ['symfmony', 'react'], styled: true},
+        {id: 4, title: "three", stack: ['symfmony', 'react'], styled: false},
+    ];
+
     return (
-        <div className="container">
-            <div className="container">
-                <div className="card">
-                    <div className="card-body">
-                        <div>
-                            <h1>hello world from React</h1>
-                            <p>why this is not working properly</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div className="min-vh-100">
+            <Hero />
+            <Projects projects={projects} />
+            <Footer />
         </div>
     );
 }
