@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
 
 @layer utilities {
-
-
-    html {
-      scroll-behavior: smooth;
-    }
     .card-color {
         background-color: #252525
     }

@@ -1,13 +1,10 @@
-// import { useState } from "react";
+/* eslint-disable jsx-a11y/anchor-is-valid */
+
+import { AiOutlineArrowRight } from "react-icons/all";
 
 
 
-const Projects = ({ projects }) => {
-
-    // const [index, setIndex] = useState(0);
-
-    
-
+const Projects = ({ projects }) => {    
 
     return (
         <div className="text-white px-16 py-8"  id="projects-section">
@@ -38,6 +35,13 @@ const Projects = ({ projects }) => {
                                             })
                                         }
                                     </div>
+                                    <div>
+                                        <a href="#" className="text-lg flex flex-row">
+                                            
+                                            <span>Demo Live</span>
+                                            <span className="mt-2 ml-2"><AiOutlineArrowRight /></span>
+                                        </a>
+                                    </div>
                                 </div>
                             )
                         } else {
@@ -61,6 +65,13 @@ const Projects = ({ projects }) => {
                                                 >{tech}</span>
                                             })
                                         }
+                                    </div>
+                                    <div>
+                                        <a href="#" className="text-lg flex flex-row">
+                                            
+                                            <span>Demo Live</span>
+                                            <span className="mt-2 ml-2"><AiOutlineArrowRight /></span>
+                                        </a>
                                     </div>
                                 </div>
                             )
